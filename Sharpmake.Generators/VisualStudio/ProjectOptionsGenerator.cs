@@ -363,6 +363,12 @@ namespace Sharpmake.Generators.VisualStudio
                 Options.Option(Options.Vc.Compiler.CLanguageStandard.C11, () => { context.Options["LanguageStandard_C"] = "stdc11"; context.CommandLineOptions["LanguageStandard_C"] = "/std:c11"; }),
                 Options.Option(Options.Vc.Compiler.CLanguageStandard.C17, () => { context.Options["LanguageStandard_C"] = "stdc17"; context.CommandLineOptions["LanguageStandard_C"] = "/std:c17"; })
                 );
+
+                context.SelectOption
+                (
+                    Options.Option(Options.Vc.Compiler.BuildStandardLibraryModules.No, () => { context.Options["BuildStlModules"] = "false"; context.CommandLineOptions["BuildStlModules"] = FileGeneratorUtilities.RemoveLineTag; }),
+                    Options.Option(Options.Vc.Compiler.BuildStandardLibraryModules.Yes, () => { context.Options["BuildStlModules"] = "true"; context.CommandLineOptions["BuildStlModules"] = FileGeneratorUtilities.RemoveLineTag; })
+                );
             }
 
             // MSVC NMake IntelliSence options

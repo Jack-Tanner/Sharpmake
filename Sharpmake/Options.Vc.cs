@@ -1370,6 +1370,20 @@ namespace Sharpmake
                     [DevEnvVersion(minimum = DevEnv.vs2019)]
                     Enable
                 }
+                
+                /// <summary>
+                /// Enable "Build ISO C++23 Standard Library Modules"
+                /// </summary>
+                /// <remarks>
+                /// Enables building C++ Standard Library Modules.
+                /// </remarks>
+                public enum BuildStandardLibraryModules
+                {
+                    [Default]
+                    No,
+                    [DevEnvVersion(minimum = DevEnv.vs2022)]
+                    Yes
+                }
             }
 
             public static class CodeAnalysis

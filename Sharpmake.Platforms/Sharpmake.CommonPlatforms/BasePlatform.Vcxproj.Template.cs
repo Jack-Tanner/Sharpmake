@@ -77,6 +77,7 @@ namespace Sharpmake
       <MaxFilesInUnityFile>[options.MaxFilesPerJumboFile]</MaxFilesInUnityFile>
       <MinFilesInUnityFile>[options.MinFilesPerJumboFile]</MinFilesInUnityFile>
       <MinUnityFiles>[options.MinJumboFiles]</MinUnityFiles>
+      <BuildStlModules>[options.BuildStlModules]</BuildStlModules>
     </ClCompile>
 ";
 
